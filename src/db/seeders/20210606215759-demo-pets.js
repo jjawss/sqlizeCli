@@ -2,7 +2,7 @@
 
 module.exports = {
 	up: (queryInterface, Sequelize) => {
-		[
+		return queryInterface.bulkInsert("Pets", [
 			{
 				id: "1",
 				name: "Aggie",
@@ -263,7 +263,7 @@ module.exports = {
 				createdAt: new Date(),
 				updatedAt: new Date(),
 			},
-		];
+		]);
 	},
 
 	down: (queryInterface, Sequelize) => {
