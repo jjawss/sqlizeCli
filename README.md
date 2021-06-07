@@ -1,6 +1,6 @@
 # sqlizeCli
 Created the data for Pets using this algorithm: 
-
+```
 const createData = () => {
   let allPetNames = [
     "Abigail",
@@ -114,3 +114,4 @@ const createData = () => {
 };
 
 createData();
+```
