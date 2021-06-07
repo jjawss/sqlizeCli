@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Pets', {
+    return queryInterface.createTable('Owners', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,29 +11,14 @@ module.exports = {
       id: {
         type: Sequelize.STRING
       },
-      name: {
+      firstName: {
         type: Sequelize.STRING
       },
-      age: {
-        type: Sequelize.NUMBER
-      },
-      weight: {
-        type: Sequelize.NUMBER
-      },
-      gender: {
+      lastName: {
         type: Sequelize.STRING
       },
-      breed: {
-        type: Sequelize.STRING
-      },
-      storId: {
-        type: Sequelize.STRING
-      },
-      ownerId: {
-        type: Sequelize.STRING
-      },
-      hasShots: {
-        type: Sequelize.BOOLEAN
+      phoneNumber: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         type: Sequelize.DATE
@@ -52,6 +37,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Pets');
+    return queryInterface.dropTable('Owners');
   }
 };
